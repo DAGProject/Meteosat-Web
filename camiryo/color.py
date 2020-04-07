@@ -8,9 +8,12 @@ Created on Fri Oct 19 15:51:14 2018
 from numpy import asarray as ar
 from numpy import dstack
 
+from PIL import Image
+
 from . import env
 from . import astro
 from . import stat
+
 
 class Eumetsat():
     def __init__(self, verb=True):
@@ -172,5 +175,11 @@ class Eumetsat():
             
             return td_arr
         except Exception as e:
-            self.eetc.print_if(e) 
+            self.eetc.print_if(e)
+
+    def image(self, image_array):
+        try:
+            return Image.fromarray(image_array)
+        except Exception as e:
+            self.eetc.print_if(e)
 

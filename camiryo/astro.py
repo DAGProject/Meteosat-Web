@@ -4,22 +4,7 @@ Created on Sun Jan 28 19:55:39 2018
 
 @author: msh
 """
-
-from astropy.io import fits as fts
-from astropy.table import Table
-from astropy import coordinates
-from astropy import units as U
 from astropy.time import Time
-
-import subprocess as sp
-
-import matplotlib.pyplot as plt
-from matplotlib import rcParams
-from matplotlib.patches import Ellipse
-
-
-from math import pow as mpow
-from math import sqrt as msqrt
 
 from h5py import File as h5file
 
